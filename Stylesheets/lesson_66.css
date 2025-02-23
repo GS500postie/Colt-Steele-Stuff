@@ -1,0 +1,19 @@
+body {
+  background-color: azure;
+  margin: 20px;
+  line-height: 1.5 ems;
+}
+.align_center {
+  text-align: center;
+  /*text-decoration: wavy blue underline 4px;*/
+}
+.fifty_percent_right_aligned {
+  width: 50%;
+  text-align: right;
+}
+.para1 {
+  line-height: 4;
+}
+.para2 {
+  letter-spacing: 6px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css_reset.css" />
+    <link rel="stylesheet" href="/Stylesheets/box_model.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Mystery+Quest&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Box Model</title>
+  </head>
+  <body>
+    <button class="home">
+      <a href="/index.html">Homepage</a>
+    </button>
+    <h1>The Box Model resource page</h1>
+    <nav>
+      <button>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model"
+          target="_blank"
+          rel="noopener noreferrer"
+          >MDN box model</a
+        >
+      </button>
+      <button>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_Model_Tasks"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Test Your Skills</a
+        >
+      </button>
+      <button>
+        <a
+          href="https://togetherlearning.com/games/boxmodel/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Box Model Playground</a
+        >
+      </button>
+    </nav>
+    <section>
+      <div class="top">
+        <h2>NOTES</h2>
+      </div>
+      <h3>Stuff I know</h3>
+      <p>
+        Firstly the css is terrible in this but I'll get better as I go along.
+      </p>
+      <p>Block and inline elements</p>
+      <p>content, margin, padding, border and border-box</p>
+      <h3>Explanations</h3>
+      <p>
+        If the display is <strong>block</strong> the box will break onto a new
+        line. Padding, margin and border will cause other elements to be pushed
+        away from the box. <strong>width</strong> and
+        <strong>height</strong> will be respected. If <strong>width</strong> is
+        not specified, the box will extend in the inline direction to fill the
+        space available in the container. In most cases the box will extend 100%
+        across the page.
+      </p>
+      <p>
+        Note the paragraph about <strong>margin collapsing.</strong> This will
+        be helpful when the margins don't behave as expected.
+      </p>
+      <p>
+        Notice you can get more granular with border styling. Handy to know just
+        in case.
+      </p>
+      <p>Do the 'test your skills' page occasionally if you need a refresh.</p>
+      <p>
+        Before we leave this page find a good Youtube video on the box model,
+        the most info that can be fitted in under 10 miutes.
+      </p>
+      <p>
+        Notice that there is another styling property called
+        <strong>outline</strong> which is a line <strong>outside</strong> the
+        element's border. Outlines DON'T TAKE UP SPACE, so they don't affect the
+        layout of the document in any way. Outlines are good for exposing the
+        elements by injecting a red outline in the code to spot all the boxes.
+      </p>
+      <p>
+        Note for future self: seriously rewatch that sartori design video
+        (master layout design) because there is so much gold about layout design
+        in there. Make a project to really help drill this into memory. Also,
+        maybe try replicating a website you find, and redo it using the
+        principles in the video. Look at the website, really get to understand
+        the construction of the layout, then watch the video and apply the
+        principles within to improve the design.
+      </p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+.heading {
+  width: 100px;
+  margin: 40px auto 0;
+  background-color: blanchedalmond;
+  text-align: center;
+}
+h2 {
+  color: teal;
+  background-color: rgb(194, 145, 240);
+}
+button {
+  color: magenta;
+  background-color: cyan;
+}
+p {
+  color: olive;
+  background: rgb(241, 196, 113);
+}
+h2,
+button,
+p {
+  margin: 20px;
+}
+div.colours {
+  background-color: rgb(231, 126, 115);
+  text-align: center;
+}
+.red {
+  color: rgb(255, 0, 0);
+}
+.blue {
+  color: rgb(0, 0, 255);
+}
+.purple {
+  color: rgb(173, 20, 219);
+}
+.black {
+  color: rgb(0, 0, 0);
+}

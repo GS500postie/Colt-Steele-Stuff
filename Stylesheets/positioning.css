@@ -1,0 +1,63 @@
+.mystery-quest-regular {
+  font-family: 'Mystery Quest', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.active_route {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  letter-spacing: 0.025rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(32, 32, 38);
+}
+.max_screen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+}
+.nav_items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 2;
+  height: 52px;
+}
+.hidden {
+  list-style: none;
+  box-sizing: border-box;
+  border: 0 solid;
+  display: block;
+}
+.item {
+  background-color: transparent;
+  text-decoration: inherit;
+  color: grey;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+.item:hover {
+  color: fuchsia;
+}
+.heading {
+  text-align: center;
+}
+h1 {
+  margin: 0 auto;
+  font-size: 100px;
+  font-family: 'Mystery Quest';
+}
+h1:hover {
+  color: fuchsia;
+}
+main {
+  width: 60%;
+  margin: 40px auto;
+}
+p {
+  margin-top: 20px;
+}

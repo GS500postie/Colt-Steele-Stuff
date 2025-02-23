@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css_reset.css" />
+    <link rel="stylesheet" href="/Stylesheets/lesson_70.css" />
+    <title>Lesson 70 onwards</title>
+  </head>
+  <body>
+    <a href="/index.html">Main page</a>
+    <h1>Lesson 70; selectors and beyond </h1>
+    <p>
+        <ul>
+            <li>You can use a comma (followed by a space) to select multiple elements</li>
+            <li>So with the ID (#) selector, you can have multiple id's in the CSS but they must only style one single element. I still don't understand this rule, but whatever. Class is easier.</li>
+            <li>At attribute selectors. We need to design a website that has easy access to cheatsheets because I found an excellent one for this topic. Syntax for attribute selectors: element[attribute=" "] {}. There also suffixes which mean stuff: ~,*,^,$. Place these before the = sign. They do stuff. Look it up on the cheatsheet.</li>
+          <li><strong>Pseudo classes.</strong></li>
+          <li><strong>Pseudo elements.</strong> Refer to the cheatsheet for these elements. Of note; <strong>selection</strong> allows you to change how the element behaves (background etc) when you select elements/portions of text.</li>
+          <li><strong>Specifity</strong> is a topic that needs to be highlighted in my CSS page. Common probable source of conflicts/things not working, and also a good way to debug. Calculator in bookmarks</li>
+          <li>In the <strong>devtools</strong> a crossed out element means that it <strong>could</strong> be the other color but something in the code is overruling it</li>
+          <li><strong>study devtools one week/month. really learn them. bookmarked. Mozilla/mdn</strong></li>
+          <li>The <strong>box model</strong> is a topic that I need to dive into. It's a way of thinking about how elements are laid out on the page. It's also a good way to understand how padding, margin, border, and width/height work together</li>
+          <li>When you are in devtools, you can change colours using a colour picker and they are INSTANT on the web page.</li>
+          <li>You can also ADD styles to the element in the devtools</li>
+        </ul>
+    
+    </p>
+  <h2>Box model</h2>
+  <p>
+    Four main properties:
+    <ul>
+      <li>Width and height</li>
+      <li>Border</li>
+      <li>Padding</li>    
+      <li>Margin</li>
+    </ul>
+  </p>
+  <p>
+    <hr>
+    <ul>
+      <li>Width and height are important for determining the size of the inner <strong>content box</strong>. Width and height are crucial for determining the layout of the page.</li>
+      <li>However, if you set the reset CSS to <strong>border box</strong> it will size the entire box including the border.</li>
+      <li>frequently inspect your code to see how the elements are situated on the page.</li>
+    </ul>
+  </p>
+  <hr>
+  <p><strong>You can take a screenshot of the entire web page in devtools.</strong> Good for having a still image of the page for layout purposes.</p>
+<p>Note the conventions applying to block, inline, and inline-block. I have trouble with this so just remember to google it if necessary until I get it. Also list all the topics in this section and try an experimental page testing myself on my knowledge of these lectures. But make a PROPER page. Don't just noodle around making random shit. Make it WORK together.</p>
+<h2>Relative units</h2>
+<ul>
+  <li><strong>percentages</strong>. These are relative to the PARENT.</li>
+  <li><strong>Ems</strong>. 1 em is equal to the computed font-size of the element itself. Or whatever component that has a specified size on the parent. eg. padding and margin. So what I'm ascertaining here is that when you apply ems to something that is not font-size, it calculates the size it should be based on the actual font-size of the element. Confusing but interesting, and make note of that. It does make a lot of sense, especially the way he styled a button that retained its shape despite what size it was. Think about this. It's important for responsive design. JUST REMEMBER THAT EMS ARE RELATIVE TO THE PARENT. If you specify ems to items nested within a parent the ems will adopt the font-size of the IMMEDIATE parent, thus getting larger down the cascade in the parent element.</li>
+  <li><strong>REMS</strong>. Relative to the ROOT ELEMENT. This means that if the root element is 20px (or 16px by default I think), the elements will take their sizing from that figure.The rems will multiply off that base figure. Which begs the question, do you set this in your initial reset?</li>
+  <li>There are use-cases for combing rems and ems. For instance having a button that has the font-size based on rems, but the padding should be ems because it is relative to the font size of the immediate parent and doesn't break the design as you resize it.</li>
+</ul>
+<br>
+<h2>Opacity and the alpha channel</h2>
+<ul>
+ <li>The 'a' in rgba (alpha channel) is different to OPACITY. Rgba affects just the background colour and no other content included in the element. Opacity applies to the CONTENT as well. When you go to the VSCode colour picker there is a transparency slider as well.</li>
+
+</ul>
+<h2>The Position Property</h2>
+<ul>
+  <li>Go through the MDN and really learn this one. In fact go through the docs for ALL topics in the CSS section and really LEARN them. Practice, practice, practice. Make a webpage for each property.</li>
+  <li>ABSOLUTE needs a lot of learning. It depends on the parent. Good for making a navbar that stays at the top. Sticky does something similar.</li>
+
+</ul>
+<h2>Transitions</h2>
+<ul>
+  <li>Transitions works best when there is a couple of seconds.</li>
+  <li>Don't do transition ALL because you may want to single out aspects of the transition.</li>
+</ul>
+<h2>Transforms</h2>
+<ul>
+  <li>
+    MARGIN-AUTO centers divs. A block level elemment with a top/bottom margin of 0 and a left/right of auto will center within the block it is contained in. Seriously look up mdn for this. This is VERY like the tools in gimp. Seriously apply gimp knowledge to this. 
+  </li>
+  <li>TRANSLATE means to MOVE an object on the page. (note the nth-of-type technique he is using.)(first-of-type as well.) (this is how you would create the MMM header)</li>
+  <li>You can do negative degrees/pixels when transforming.</li>
+</ul>
+<h2>More background</h2>
+<ul>
+  <li>Translate; a positive number moves DOWN, negative, up.</li>
+</ul>
+<h2>Background as opposed to background-color</h2>
+<ul>
+  <li>UNSPLASH for images. You can do multiple images, say one on top of the other. Do EMBED if you want to use a google font. You can pair fonts in google.</li>
+</ul>
+  </body>
+</html>
