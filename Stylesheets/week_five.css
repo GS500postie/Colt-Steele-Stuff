@@ -1,0 +1,10 @@
+h1 {
+  font-family: 'Water Brush';
+  font-size: 10rem;
+  color: rgb(127, 183, 231);
+  text-align: center;
+}
+.fish {
+  margin: 0 auto;
+  border: 3px solid red;
+}

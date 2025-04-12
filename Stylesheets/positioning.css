@@ -3,7 +3,10 @@
   font-weight: 400;
   font-style: normal;
 }
-
+header {
+  position: sticky;
+  top: 1px;
+}
 .active_route {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -60,4 +63,57 @@ main {
 }
 p {
   margin-top: 20px;
+}
+.absolute1 {
+  margin-top: 20px;
+  position: relative;
+}
+
+.blank {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  background-color: aqua;
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.absolute {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  background-color: rgba(243, 155, 155, 0.5);
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  position: absolute;
+  left: 230px;
+}
+.fixed {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  background-color: rgba(243, 155, 155, 0.5);
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  position: fixed;
+  bottom: 10px;
+  left: 700px;
+  right: 0;
+}
+.sticky {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  background-color: rgba(243, 155, 155, 0.5);
+
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.absolute2 {
+  margin-top: 20px;
+  position: sticky;
+  top: 55px;
 }

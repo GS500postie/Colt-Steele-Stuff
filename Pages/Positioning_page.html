@@ -62,8 +62,72 @@
         reference reasons and ended up doing a whole lot more. Friggin' AWESOME!
       </p>
       <p>
-        We have to learn about anchor positioning because it's a new property
+        <h2>Anchor positioning</h2>
+       You have an <strong>anchor</strong> and <strong>target</strong>. The anchor has to be created. It needs a dashed indent. So we give the anchor element a class name and then create a class and set up the anchor, and use the descriptor 'anchor-name'; (I'm using the class name 'anchor') <strong>.anchor {anchor-name: --my-anchor;}</strong>
       </p>
+      <p><strong>Target</strong>. The target element is an element with an absolute position linked to an anchor element matching what's declared on the anchor-name property. This attaches the target element to the anchor element. We set the target with the <strong>position-anchor</strong> element. <strong>.target { position: absolute; position-anchor: --my-anchor;}</strong></p>
+      <p><strong>Positioning targets</strong>. the following two properties are used to set at which side of the anchor element the target is positioned on (position-area)
+       and conditions for hiding the target element when it runs out of room (position-visibility). <strong>position-area</strong>. Read the aricle about the imaginary grid.OK lets leave that one there because firefox doesn't support anchor positioning yet</p>
+       <p>Let's get back to standard positioning. <strong>Position: static</strong>. The element is positioned according to the normal flow of the document. The top, right, bottom,left and z-index properties have no effect. This is the default value.</p>
+       <p><strong>Position: relative</strong>. The element is positioned according to the normal flow of the document, then offset <strong>relative to itself</strong> based on the values of top, right, bottom, and left. the offset does not affect the position of other elements: thus the space given for the element in the page layout is the same as if the position were <strong>static</strong></p> 
+       <p><strong>Absolute</strong>. The element is removed from the normal document flow, and no space is created for the element in the page layout. the element is positioned relative to its closest positioned ancestor (if any) or to the initial <strong>containing block</strong>. Its final position is determined by the values of top, right, bottom, and left.</p>
+       <p><strong>Fixed</strong>. The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial <strong>containing block</strong>, which is the viewport. its final position is determined by the values of top, right, bottom and left</p>
+       <p><strong>Sticky</strong>. The element is positioned according to the normal flow of the document, and then offset relative to its <strong>nearest scrolling ancestor</strong>. Essentially the element sticks to the page after a set scrolling motion is activated.</p>
+       <div class="absolute1">
+        <div class="blank">One</div>
+        <div class="blank">Two</div>
+        <div class="absolute">Three</div>
+        <div class="blank">Four</div>
+       </div>
+       <p>Above we have four objects, the third having position: absolute, and is sitting on top of the fourth. My current problem is that the values of top, right bottom and left are not acting in a predictable way. The fact that the third object is removed from the document flow is correct here. Adding position:relative to the parent element allowed the object to be moved up and down the correct number of pixels but right and left respond weirdly. Something in the parent element or the whole document itself. Basically I worked out that any instance of right or left doesn't offset from the nearest adjacent child (two), but the actual edge of the parent div. So, 'three' here is actually <strong>left: 230px</strong> which means it's 230px in from the <strong>left</strong> side. Think I'm getting it! (See the MDN page. It actually explains this. Also the element is <strong>240px</strong> in because there is a 10px margin on the left side).</p>
+       <div class="absolute1">
+        <div class="blank">One</div>
+        <div class="blank">Two</div>
+        <div class="fixed">Three (fixed)</div>
+        <div class="blank">Four</div>
+       </div>
+       <p>Above we have position <strong>fixed</strong>. It will stay in place as the page is scrolled, but if you get it at the right level it is part of the series. It is still removed from the flow of the document because the fourth sibling is adjacent to the second. This is a good choice if you want something to stay in place while scrolling, like a footer or contact list at the bottom of the page. May have navbar use cases.</p>
+       <div class="absolute2">
+        <div class="blank">One</div>
+        <div class="blank">Two</div>
+        <div class="sticky">Three</div>
+        <div class="blank">Four</div>
+       </div>
+       <p>The navbar at the top is <strong>Sticky</strong>. I couldn't separate the pink one so made the whole row sticky.</p>
+       <p>And that's it for positioning. The lorem at the bottom is for scrolling for the sticky row.</p>
+       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit perferendis temporibus ad, placeat voluptas obcaecati reiciendis, amet atque aliquid officia ut magnam eaque doloribus, id exercitationem. Iste dolorem eaque eum.
+       Quam amet sequi sed, quae animi minus eaque repudiandae ab aspernatur, iste necessitatibus est dolor possimus itaque suscipit asperiores laudantium accusantium cumque nesciunt autem doloribus ipsum sit vel! Possimus, ad?
+       Adipisci nemo temporibus neque tempore harum laborum cumque id a inventore quos, voluptatum impedit, rem porro eos esse nobis. Nihil aut dolorem iusto at laboriosam odio corrupti esse soluta corporis.
+       Unde quam voluptas consectetur possimus aliquam, fugit at quas maiores necessitatibus sit ut cum ipsa dicta sed dolores, eius, vel consequatur laudantium. Atque consequatur animi, architecto obcaecati earum facilis cumque?
+       Nulla in quia sapiente ratione aperiam error excepturi ullam. Aut architecto rem eius pariatur molestiae? Cum voluptatum, vero, sapiente assumenda dolor quibusdam illum dicta ipsum vitae beatae harum aut consequuntur.
+       Vel dignissimos distinctio laborum aliquam temporibus similique nesciunt aliquid provident tempore architecto aut, exercitationem est corrupti qui, alias fuga eligendi necessitatibus impedit incidunt sapiente voluptates beatae minima. Similique, quidem perspiciatis?
+       Consequuntur consectetur est velit ipsum amet laudantium praesentium eius eligendi saepe mollitia nihil illum quos natus alias qui odit nemo quo, atque dolorum quasi. Vitae dicta voluptas doloribus placeat autem.
+       Labore vitae assumenda modi natus qui, quaerat delectus, dicta alias debitis ea earum, necessitatibus repellat quod minus enim dignissimos aperiam suscipit blanditiis quisquam cum accusantium! Iure molestiae quam laboriosam quisquam.
+       Excepturi ex sed quas, dolore, at quia voluptas beatae consequuntur magni illum enim totam. Corporis, eos ex est voluptas, delectus corrupti consequuntur natus recusandae nisi nostrum, quidem rerum assumenda voluptates.
+       Consequuntur necessitatibus corporis deleniti nihil laboriosam soluta quasi optio mollitia voluptas repudiandae earum in perspiciatis id illo voluptates ducimus doloremque, veritatis facere libero quibusdam enim ipsa alias dolore. Repellendus, similique.
+       Alias nemo reprehenderit laudantium et? Hic cum sit voluptatem autem magni illo, soluta nihil eius vel ea sed unde distinctio et, nesciunt saepe sint dolorem alias repellat. Natus, odio animi?
+       Rem, rerum! Atque repellendus quis ab eveniet placeat, veniam, at reiciendis voluptatibus distinctio sunt voluptate. Eveniet quos aperiam explicabo sapiente? Distinctio doloremque similique fuga aliquid, expedita perferendis accusamus eaque aliquam.
+       Veritatis quas incidunt nobis. Ea dignissimos facere iste nisi. Exercitationem in sequi culpa ab hic impedit magni obcaecati praesentium fugit labore similique fugiat, architecto cumque doloribus, ipsum repellat molestiae id.
+       Voluptatibus est eveniet qui earum nihil ipsum! Accusantium dolor perferendis officia, cumque, odit eaque veritatis praesentium id dolores animi ex exercitationem rem quis, qui est omnis ab totam reiciendis quibusdam?
+       Dolores hic reprehenderit repellat aperiam architecto neque saepe, incidunt repellendus vitae id, aliquid dignissimos eaque expedita inventore est veniam, voluptatem possimus nesciunt impedit pariatur? Magni quia totam eveniet quas impedit?
+       Obcaecati praesentium officiis suscipit consectetur qui, quos, dolorum voluptatum at nemo distinctio fugit, est aspernatur sapiente! Iure commodi dignissimos laudantium unde a harum laborum, explicabo, molestias amet nam voluptatibus nemo!
+       Autem soluta iste commodi harum voluptatibus eius blanditiis eum rerum. Dolore animi iure ratione doloribus ipsa voluptas amet magni magnam non? Fuga reiciendis earum expedita. Corrupti sequi doloribus fugiat quos?
+       Porro suscipit officia consequatur nam amet cum expedita illo accusamus, ut, natus laboriosam velit id, ullam numquam. Voluptatum unde officiis, eligendi, libero dolorum quasi ab veniam tempora quo perferendis voluptate.
+       Assumenda blanditiis soluta suscipit qui, beatae natus, necessitatibus quidem eos expedita quos hic consectetur officiis praesentium odio rerum cupiditate. Ut magnam quis omnis officiis quae ea dolores a ipsum voluptate.
+       Odit, odio laboriosam minus fugit velit delectus officia voluptatum? Corrupti cum atque omnis ipsam maxime molestias, quod itaque incidunt perferendis! Aut voluptatibus voluptatum, porro repellendus tempora minus consequuntur quisquam possimus!
+       Nisi adipisci enim, repellat repudiandae molestiae eum veniam delectus distinctio. Totam debitis repellendus doloremque commodi tenetur, maiores, ipsam reprehenderit facere architecto dolor error ab ea impedit optio aperiam, laboriosam sint?
+       Repudiandae numquam optio, molestias quia atque quisquam. Qui magni nesciunt veniam amet corrupti consequatur numquam asperiores neque hic, dolore sapiente fugiat in! Nesciunt animi dicta, delectus nostrum sunt quaerat molestias.
+       Vero eos, doloremque maxime magnam autem saepe aspernatur consequuntur nihil accusantium laborum quidem numquam quaerat deleniti dolorum minima excepturi laboriosam cupiditate illum at! In repellat itaque quam veritatis obcaecati sit.
+       Aut natus libero, accusamus adipisci laboriosam architecto facilis distinctio quos eos blanditiis ratione aliquam amet neque minus maxime. Ullam ratione natus error beatae animi doloremque eveniet eius officia, eligendi vitae.
+       Labore adipisci ullam veniam cum dolore nobis facere eius et soluta qui molestias quia tenetur beatae quibusdam odio quos amet alias sapiente eum fugit perspiciatis, quae vitae recusandae nesciunt. Eos?
+       Neque commodi voluptate nisi voluptas perspiciatis ipsum qui facere fuga aut, eveniet ut laborum vel nihil quisquam unde optio earum dolorum assumenda tenetur, impedit quo? Ab impedit earum itaque laboriosam!
+       Hic, perferendis, voluptatem consequuntur provident maiores dolorem deleniti tempore harum soluta accusantium sapiente explicabo sed dolore libero. Expedita, praesentium numquam. Neque incidunt sit debitis iure optio temporibus similique, minima nobis.
+       Eaque totam exercitationem pariatur enim assumenda facere laboriosam commodi quam! Voluptatibus aperiam quae beatae voluptate excepturi obcaecati, sit nulla consectetur, harum inventore odit, tenetur exercitationem quos est magnam delectus itaque!
+       Quae consequuntur obcaecati suscipit maiores! Nulla, odit eligendi? Commodi cum, tempora veniam ducimus iure quasi maiores accusamus quaerat earum fuga. Ipsam ratione sed, deserunt sint fugit maiores veritatis quas cum.
+       Eligendi hic soluta inventore quidem modi placeat obcaecati consequuntur id quos autem quae ea nulla similique nihil, iure qui sequi accusantium omnis. Pariatur sit ut aliquam voluptatem. Nostrum, tenetur minus.</p>
+      
     </main>
+    <div class="anchor">anchor</div>
+    <div class="target">target</div>
   </body>
 </html>
