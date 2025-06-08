@@ -1,0 +1,12 @@
+img {
+  display: inline;
+  width: 30%;
+  margin: calc(10% / 6);
+}
+.done {
+  color: darkseagreen;
+  text-decoration: line-through solid black;
+}
+.red {
+  color: red;
+}
