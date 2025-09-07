@@ -13,7 +13,7 @@
   </head>
   <body>
     <a href="/index.html">Home</a>
-    <div class="container">
+    <div class="container pb-5">
       <h1>Bootstrap (Week 11)</h1>
       <button type="button" class="btn btn-primary">Primary</button>
       <button type="button" class="btn btn-secondary">Secondary</button>
@@ -52,6 +52,182 @@
         the last two) (changed the last two to small and large)
       </p>
       <p>I really should go through the Tailwind docs as well</p>
+      <p class="lead">
+        Bootstrap docs/content/typography. we're doing headings here.
+      </p>
+      <h2 class="display-4 text-center">Typography</h2>
+      <p>
+        The above done with h2 class 'display-4'. Above that the paragraph has
+        been given the class of 'lead'. (changes the font size and weight)
+      </p>
+      <blockquote class="blockquote-footer">
+        This is a blockquote footer. (You would probably use this as attributing
+        to the author)
+      </blockquote>
+      <p>
+        I applied the class text-center to the 'Typography' h2. (note that
+        Display classes are NOT responsive by default, but there are
+        work-arounds)
+      </p>
+      <h2 class="display-2 text-end bg-info-subtle">Colors</h2>
+      <p>
+        The above using alignment in the text section of the
+        <span class="fw-bold">utilities</span> section of the docs. (also added
+        a background-colour using class bg-info-subtle) Also I'm pretty much
+        using bootstrap for all my styling on this page. Check the CSS. I
+        applied the class 'text-end' to get the text to move to the right.
+      </p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-warning">one</button>
+        <button type="button" class="btn btn-warning">two</button>
+        <button type="button" class="btn btn-warning">three</button>
+      </div>
+      <p>
+        Above is a BUTTON GROUP. Note how they are not separated. Alerts work
+        the same.
+      </p>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those
+        fields below.
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <p>
+        (Just a note: anything with the 'aria' prefix relates to screenreader
+        behaviour. the dismissible alert above isn't working either. May be VS
+        code settings. I've just been made aware of the fact that I haven't
+        linked to a couple of other javascript dependancies, and that's why it's
+        not working)
+      </p>
+      <h2 class="display-2">Grid Basics</h2>
+      <p>The grid only works if it is WITHIN A CONTAINER</p>
+      <p>
+        Every row in bootstrap has 12 units to divvy up. Every piece in the
+        divvied up row becomes a Column. (So to have 3 columns you divvy the row
+        up into 3 lots of 4)
+      </p>
+      <div class="row">
+        <div class="col-2 bg-success">Row 1</div>
+        <div class="col-10 bg-danger">Row 2</div>
+      </div>
+      <p>
+        (The above has one column two units wide and the other is 10 units wide)
+      </p>
+      <h3 class="display-2 text-center">Bootstrap Grid Practice</h3>
+      <div class="row">
+        <div class="col-4 bg-danger">One Third</div>
+        <div class="col-8 bg-info">Two Thirds</div>
+      </div>
+      <div class="row">
+        <div class="col-3 bg-warning">One Quarter</div>
+        <div class="col-6 bg-primary">One Half</div>
+        <div class="col-3 bg-warning">One Quarter</div>
+      </div>
+      <p>
+        We are now going into Responsive Design. First things is learning about
+        the built-in breakpoints
+      </p>
+      <h2 class="display-4">Responsive Grid</h2>
+      <div class="row">
+        <div class="col-md-6 col-xl-3 bg-info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad obcaecati
+          illum explicabo, architecto unde optio et vel, minus aliquid,
+          laudantium error sed eaque impedit tempore aut eveniet modi. Ullam,
+          sed.
+        </div>
+        <div class="col-md-6 col-xl-3 bg-success">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad obcaecati
+          illum explicabo, architecto unde optio et vel, minus aliquid,
+          laudantium error sed eaque impedit tempore aut eveniet modi. Ullam,
+          sed.
+        </div>
+        <div class="col-md-6 col-xl-3 bg-info">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad obcaecati
+          illum explicabo, architecto unde optio et vel, minus aliquid,
+          laudantium error sed eaque impedit tempore aut eveniet modi. Ullam,
+          sed.
+        </div>
+        <div class="col-md-6 col-xl-3 bg-success">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad obcaecati
+          illum explicabo, architecto unde optio et vel, minus aliquid,
+          laudantium error sed eaque impedit tempore aut eveniet modi. Ullam,
+          sed.
+        </div>
+        <p>
+          Look at the code for the above. Four different divs, two colours. The
+          divs take up four units in a wide layout, then go to 6 units in a
+          medium layout, then down to a single unit in a small layout
+        </p>
+        <p>Below we are playing with responsive images</p>
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-md-6">
+          <img class="img-fluid" src="/Images/sunflower.jpg" alt="" />
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <img class="img-fluid" src="/Images/roadwork.jpg" alt="" />
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <img class="img-fluid" src="/Images/utes.jpg" alt="" />
+        </div>
+        <p>
+          Read the code but also resize the page to see how the images change
+          place.
+        </p>
+      </div>
+      <h2 class="display-4">Forms</h2>
+      <p>
+        First step is to use the class 'form-control'. Read the docs and
+        experiment.
+      </p>
+      <form action="#nowhere">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <select class="form-control" name="state" id="state">
+            <option value="QLD">Queensland</option>
+            <option value="NSW">New South Wales</option>
+            <option value="VIC">Victoria</option>
+            <option value="SA">South Australia</option>
+            <option value="WA">Western Australia</option>
+            <option value="TAS">Tasmania</option>
+          </select>
+          <p>custom checkbox below, compared to normal checkbox. (They seem to be operating opposite to the code. The top one is custom but the bottom is normal)</p>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input">
+          <label for="defaultCheck1" class="form-check-label">Default checkbox</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input">
+          <label for="customCheck1" class="custom-control-label">Check this custom textbox</label>
+        </div>
+        <p class="pt-5">(In all honesty he said you can just copy the code from the docs and modify it yourself. Might try that.)</p>
+        <h2 class="display-4">Navbars!</h2>
+        <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+  </div>
+</nav>
+<h2 class="display-6">In all honesty you can copy and paste this stuff from the bootstrap docs, especially navbars</h2>
+<h2 class="display-4">Bootstrap icons</h2>
+<button class="btn btn-lg btn-danger">Delete</button>
+<p class="mt-3">We can play with this in our next webpage. We're doing icons here but if you need icons Font Awesome is a good place. (Not mentioned in the bootstrap docs). What is really cool is the utilities section, especially when you are adding margin and padding.</p>
+<p>Just saw something interesting in <strong>Content: Code</strong> section of the docs. You can add some stuff to show that something is to be entered via the keyboard. For instance, if I want to list a bunch of stuff showing how to do terminal commands and want it to look nice I can do something like; to update the system in the terminal, type <kbd><kyb>sudo</kyb><kyb> apt</kyb> <kyb> update</kyb></kbd>. Hopefully that one came out! (Yep that definitely worked!)</p>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   </body>

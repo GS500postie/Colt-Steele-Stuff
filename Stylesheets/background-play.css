@@ -1,0 +1,25 @@
+.one {
+  height: 100vh;
+  width: 100%;
+  background: no-repeat center/90% url(/Images/sea-edge-79ab30e2.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+.two {
+  height: 100vh;
+  width: 100%;
+  background: no-repeat center/90% url(/Images/angler_fish.png);
+}
+.three {
+  height: 100vh;
+  width: 100%;
+  background: border-box #3cbcdb;
+}
+.four {
+  height: 100vh;
+  width: 100%;
+  background: #6fd31d;
+}

@@ -33,3 +33,16 @@ h2 {
   text-align: center;
   padding: 20px;
 }
+.gradient {
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+  margin: 40px auto;
+  background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 0) 0 0,
+    radial-gradient(circle closest-side, #ffffff 53%, rgba(255, 255, 255, 0) 0)
+      0 0,
+    radial-gradient(circle closest-side, #ffffff 50%, rgba(255, 255, 255, 0) 0)
+      55px 0 #48b;
+  background-size: 110px 200px;
+  background-repeat: repeat-x;
+}
